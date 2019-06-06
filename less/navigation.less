@@ -1,17 +1,17 @@
 // Navigation Styles here
 
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    .flex(row, space-between, center);
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // align-items: center;
     max-width: 800px;
     width: 100%;
-    align-items: center;
     margin: 2rem auto;
 
     .header-box {
         width: 49%;
-    }
         a {
             font-size: 1.5rem;
             color: black;
@@ -19,13 +19,20 @@ nav {
             &:link {
                 text-decoration: none;
             }
+            &:hover {
+                background-color: @new-btn;
+                border: 0.5px solid black;
+                border-radius: 10px;
+            }
         }
+    }
 
     @media @mobile {
         width: 100%;
+        .flex(column, center, center);
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        // flex-direction: column;
+        // justify-content: center;
 
         .header-box {
             width: 100%;
@@ -36,5 +43,4 @@ nav {
             padding-bottom: 1rem;
         }
     }
-
 }

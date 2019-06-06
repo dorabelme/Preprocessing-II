@@ -33,10 +33,11 @@
 
     @media @mobile {
       width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
+      .flex(column, center, center);
+      // display: flex;
+      // flex-wrap: wrap;
+      // flex-direction: column;
+      // justify-content: center;
     }
    
     
@@ -67,6 +68,11 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -84,8 +90,6 @@
 
     @media @mobile {
       width: 100%;
-      margin-left: 2rem;
-      margin-right: 2rem;
     }
 
     img {
@@ -101,10 +105,12 @@
 
     @media @mobile {
       width: 100%;
-      display: flex;
+      .flex(column, center, center);
       flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
     }
 
     .destination {
@@ -112,22 +118,15 @@
       margin-bottom: 30px;
 
       @media @mobile {
-        width: 100%;
-        margin-left: 4rem;
-        margin-right: 4rem;
+        width: 80%;
       }
 
       .btn {
         .button-style();
 
         @media @mobile {
-          background-color: #1892A9;
-        }
-      }
-
-      p {
-        @media @mobile {
-          padding-right: 3rem;
+          background-color: @new-btn;
+          width: 100%;
         }
       }
     }
