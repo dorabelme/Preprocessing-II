@@ -175,7 +175,7 @@ nav {
   align-items: center;
   max-width: 800px;
   width: 100%;
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
 }
 nav .header-box {
   width: 49%;
@@ -229,7 +229,7 @@ nav .header-box a:hover {
 .home header {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   border-bottom: 2px dashed #C0C0C0;
   border-top: 2px dashed #C0C0C0;
 }
@@ -353,4 +353,66 @@ nav .header-box a:hover {
     background-color: #1892A9;
     width: 100%;
   }
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fafafa;
+  padding: 20px;
+  border: 0.5px solid grey;
+  margin-bottom: 30px;
+  width: 100%;
+  border-radius: 10px;
+}
+.contact form {
+  width: 100%;
+}
+.contact .contact-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact input[type=text],
+.contact select,
+.contact textarea {
+  width: 100%;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.contact input[type=submit] {
+  background-color: #0E6E6D;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  width: 85%;
+  padding: 1.5rem;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 20px auto;
+}
+.contact input[type=submit]:hover {
+  background-color: #1892A9;
+  color: white;
+  transition: 0.3s;
+}
+.contact .name,
+.contact .email,
+.contact .phone,
+.contact .subject,
+.contact .package {
+  font-size: 1.5rem;
+  margin: 20px;
+  width: 100px;
+}
+.contact #subject-area {
+  height: 100px;
 }
