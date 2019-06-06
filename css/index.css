@@ -168,12 +168,6 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-@media (max-width: 500px) {
-  body {
-    width: 100%;
-    padding: 0 2rem;
-  }
-}
 nav {
   display: flex;
   flex-direction: row;
@@ -220,17 +214,23 @@ nav a:link {
   font-size: 1.6rem;
   padding: 20px;
 }
-header {
+@media (max-width: 500px) {
+  .home {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.home header {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
   border-bottom: 2px dashed #C0C0C0;
   border-top: 2px dashed #C0C0C0;
 }
-header img {
+.home header img {
   padding-bottom: 2.6rem;
 }
-header p {
+.home header p {
   line-height: 1.5;
   font-size: 1.6rem;
   padding-bottom: 10px;
@@ -340,6 +340,6 @@ header p {
 }
 @media (max-width: 500px) {
   .home .content-pick .destination p {
-    padding-right: 4rem;
+    padding-right: 3rem;
   }
 }
