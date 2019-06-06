@@ -1,1 +1,40 @@
 // Navigation Styles here
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    align-items: center;
+    margin: 2rem auto;
+
+    .header-box {
+        width: 49%;
+    }
+        a {
+            font-size: 1.5rem;
+            color: black;
+            padding: 2rem;
+            &:link {
+                text-decoration: none;
+            }
+        }
+
+    @media @mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .header-box {
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            padding-bottom: 1rem;
+        }
+    }
+
+}
