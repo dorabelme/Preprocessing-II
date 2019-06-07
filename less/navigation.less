@@ -5,18 +5,40 @@
     border-bottom: 2px dashed @navigation-border;
     padding-bottom: 2rem;
 
-    nav {
+    .nav-container {
+        height: 100%;
         .flex(row, space-between, center);
-        max-width: 800px;
-        width: 100%;
-        margin: 2rem auto 0 auto;
+        // max-width: 800px;
+        // width: 100%;
+        // margin: 2rem auto 0 auto;
 
-        .header-box {
-            width: 49%;
+        @media @mobile {
+            width: 100%;
+            justify-content: center;
+            .flex(column, center, center);
+            padding-top: 10px;
+        }
+
+        .logo {
+            @media @mobile {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        nav {
+            width: 350px;
+            display: flex;
+            justify-content: space-evenly;
+
+            @media @mobile {
+                width: 100%;
+                justify-content: space-around;
+            }
+
             a {
-                font-size: 1.5rem;
-                color: black;
-                padding: 2rem;
+                font-size: 1.6rem;
+                color: @font-color;
                 &:link {
                     text-decoration: none;
                 }
@@ -25,21 +47,6 @@
                     border: 0.5px solid black;
                     border-radius: 10px;
                 }
-            }
-        }
-
-        @media @mobile {
-            width: 100%;
-            .flex(column, center, center);
-            display: flex;
-
-            .header-box {
-                width: 100%;
-                text-align: center;
-            }
-
-            h1 {
-                padding-bottom: 1rem;
             }
         }
     }
