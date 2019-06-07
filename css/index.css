@@ -168,7 +168,12 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-nav {
+.full-header {
+  width: 100%;
+  border-bottom: 2px dashed #C0C0C0;
+  padding-bottom: 2rem;
+}
+.full-header nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -177,35 +182,35 @@ nav {
   width: 100%;
   margin: 2rem auto 0 auto;
 }
-nav .header-box {
+.full-header nav .header-box {
   width: 49%;
 }
-nav .header-box a {
+.full-header nav .header-box a {
   font-size: 1.5rem;
   color: black;
   padding: 2rem;
 }
-nav .header-box a:link {
+.full-header nav .header-box a:link {
   text-decoration: none;
 }
-nav .header-box a:hover {
-  background-color: #1892A9;
+.full-header nav .header-box a:hover {
+  background-color: #A3E4D7;
   border: 0.5px solid black;
   border-radius: 10px;
 }
 @media (max-width: 500px) {
-  nav {
+  .full-header nav {
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
   }
-  nav .header-box {
+  .full-header nav .header-box {
     width: 100%;
     text-align: center;
   }
-  nav h1 {
+  .full-header nav h1 {
     padding-bottom: 1rem;
   }
 }
@@ -229,9 +234,8 @@ nav .header-box a:hover {
 .home header {
   max-width: 800px;
   width: 100%;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto 0 auto;
   border-bottom: 2px dashed #C0C0C0;
-  border-top: 2px dashed #C0C0C0;
 }
 .home header img {
   padding-bottom: 2.6rem;
@@ -342,11 +346,13 @@ nav .header-box a:hover {
   padding: 1.5rem;
   border-radius: 15px;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: linear;
 }
 .home .content-pick .destination .btn:hover {
-  background-color: #1892A9;
-  color: white;
-  transition: 0.3s;
+  background-color: #A3E4D7;
+  color: black;
 }
 @media (max-width: 500px) {
   .home .content-pick .destination .btn {
@@ -397,12 +403,20 @@ nav .header-box a:hover {
   padding: 1.5rem;
   border-radius: 15px;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: linear;
   margin: 20px auto;
 }
 .contact input[type=submit]:hover {
-  background-color: #1892A9;
-  color: white;
-  transition: 0.3s;
+  background-color: #A3E4D7;
+  color: black;
+}
+@media (max-width: 500px) {
+  .contact input[type=submit] {
+    background-color: #1892A9;
+    width: 100%;
+  }
 }
 .contact .name,
 .contact .email,

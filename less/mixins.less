@@ -10,10 +10,13 @@
     padding:  1.5rem;
     border-radius: 15px;
     cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
     &:hover {
-        background-color: @new-btn;
-        color: white;
-        transition: 0.3s;
+        background-color: @hover-color;
+        color: black; 
+        ;
     }
 }
 

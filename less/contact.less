@@ -27,6 +27,11 @@
 	input[type=submit] {
 		.button-style();
 		margin: 20px auto;
+
+		@media @mobile {
+			background-color: @new-btn;
+			width: 100%;
+		}
 	}
 
 	.name, .email, .phone, .subject, .package {
